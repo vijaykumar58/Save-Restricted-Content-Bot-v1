@@ -16,4 +16,7 @@ COPY . .
 
 EXPOSE 8000
 
-CMD ["sh", "-c", "flask run -h 0.0.0.0 -p 8000 & python3 -m devgagan"]
+ENV FLASK_APP=app.py
+ENV FLASK_ENV=production
+
+CMD ["sh", "-c", "flask run -h 0.0.0.0 -p 8000 & python3 main.py"]
