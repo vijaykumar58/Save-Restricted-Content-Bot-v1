@@ -32,8 +32,8 @@ def parse_int_env(var_name):
     except (TypeError, ValueError):
         return None
 
-LOG_GROUP = parse_int_env("LOG_GROUP", "-1002633547185")  # optional with -100
-FORCE_SUB = parse_int_env("FORCE_SUB", "-1002558537382")  # optional with -100
+LOG_GROUP = int(os.getenv("LOG_GROUP", "-1002633547185")) # optional with -100
+FORCE_SUB = int(os.getenv("FORCE_SUB", "-1002558537382")) # optional with -100
 
 YT_COOKIES = os.getenv("YT_COOKIES", YTUB_COOKIES)
 INSTA_COOKIES = os.getenv("INSTA_COOKIES", INST_COOKIES)
