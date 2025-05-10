@@ -21,7 +21,7 @@ API_ID = os.getenv("API_ID", "")
 API_HASH = os.getenv("API_HASH", "")
 BOT_TOKEN = os.getenv("BOT_TOKEN", "")
 MONGO_URI = os.getenv("MONGO_DB", "")
-OWNER_ID = [int(x) for x in os.getenv("OWNER_ID", "").split() if x.isdigit()]  # list separated via space
+OWNER_ID = [int(x) for x in os.getenv("OWNER_ID", "5914434064").split() if x.isdigit()]  # list separated via space
 DB_NAME = os.getenv("DB_NAME", "telegram_downloader")
 STRING = os.getenv("STRING", None)  # optional
 
@@ -32,8 +32,8 @@ def parse_int_env(var_name):
     except (TypeError, ValueError):
         return None
 
-LOG_GROUP = parse_int_env("LOG_GROUP")  # optional with -100
-FORCE_SUB = parse_int_env("FORCE_SUB")  # optional with -100
+LOG_GROUP = parse_int_env("LOG_GROUP", "-1002633547185")  # optional with -100
+FORCE_SUB = parse_int_env("FORCE_SUB", "-1002558537382")  # optional with -100
 
 YT_COOKIES = os.getenv("YT_COOKIES", YTUB_COOKIES)
 INSTA_COOKIES = os.getenv("INSTA_COOKIES", INST_COOKIES)
